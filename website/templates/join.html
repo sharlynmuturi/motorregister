@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h1>Please Fill in the Details of the Insured</h1>
+<br/>
+
+<form method='POST' action="{% url 'join' %}">
+	{% csrf_token %}
+
+  	<div class="mb-3">
+    	<input type="text" class="form-control" placeholder="Registration Number" name="regno" value="{{ regno }}">
+  	</div>
+
+    <div class="mb-3">
+    	<input type="text" class="form-control" placeholder="Value of Vehicle" name="sumassured" value="{{ sumassured }}">
+ 	 </div>
+
+    <div class="mb-3">
+    	<input type="text" class="form-control" placeholder="Commencement Date of Cover: m/d/Y" name="commencementdate" value="{{ commencementdate }}">
+  	</div>
+
+    <div class="mb-3">
+    	<input type="text" class="form-control" placeholder="Expiry Date of Cover: m/d/Y" name="expirydate" value="{{ expirydate }}">
+  	</div>
+
+    <div class="mb-3">
+    	<input type="text" class="form-control"  placeholder="First Name" name="firstname" value="{{ firstname }}">
+  	</div>
+
+    <div class="mb-3">
+    	<input type="text" class="form-control" placeholder="Middle Name" name="middlename" value="{{ middlename }}">
+  	</div>
+
+    <div class="mb-3">
+    	<input type="text" class="form-control" placeholder="Last Name" name="lastname" value="{{ lastname }}">
+  	</div>
+
+    <div class="mb-3">
+    	<input type="text" class="form-control" placeholder="Phone Number" name="phoneno" value="{{ phoneno }}">
+  	</div>
+
+    <div class="mb-3">
+    	<input type="text" class="form-control" placeholder="Id Number" name="idno" value="{{ idno }}">
+  	</div>
+
+    <div class="mb-3">
+    	<input type="text" class="form-control" placeholder="KRA PIN" name="krapin" value="{{ krapin }}">
+  	</div>  
+
+    <div class="mb-3">
+    	<input type="text" class="form-control" placeholder="Staff Number" name="staffno" value="{{ staffno }}">
+ 	 </div>
+
+    <div class="mb-3">
+    	<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email Address" name="email" value="{{ email }}">
+  	</div>
+
+    <div class="mb-3">
+    	<input type="text" class="form-control" placeholder="Personnel Area" name="area" value="{{ area }}">
+  	</div>
+
+  	<br/>
+
+  	<button type="submit" class="btn btn-secondary">Submit</button>
+</form>
+
+{% endblock %}

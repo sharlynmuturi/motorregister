@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<h1>Staff Motor Database</h1>
+
+	{% for item in all %}
+		<strong>{{ item.regno }}</strong><br/>
+		Sum Assured: {{ item.sumassured }}<br/> 
+		Commencement Date: {{ item.commencementdate }}<br/>
+		Expiry Date: {{ item.expirydate }}<br/><br/>
+		<hr>
+	{% endfor %}
+
+{% endblock %}
